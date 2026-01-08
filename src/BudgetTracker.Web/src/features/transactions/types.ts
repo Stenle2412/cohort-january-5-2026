@@ -32,8 +32,11 @@ export interface ImportTransactionsParams {
 }
 
 export interface ImportResult {
-  success: boolean;
-  message: string;
-  imported: number;
-  skipped: number;
+  totalRows: number;
+  importedCount: number;
+  failedCount: number;
+  errors: string[];
+  sourceFile?: string;
+  importSessionHash?: string;
+  importedAt: string;
 }
